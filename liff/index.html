@@ -154,11 +154,18 @@
       await liff.init({
         liffId: "1654010534-OlA72E2o"
       })
-      getEnvironment()
-      getUserProfile()
-      getContext()
-      getFriendship()
-      createUniversalLink()
+
+      //suport External Browser
+      document.getElementById("isLoggedIn").append(liff.isLoggedIN())
+      if (liff.isLoggedIN()) {
+        getEnvironment()
+        getUserProfile()
+        getContext()
+        getFriendship()
+        createUniversalLink()
+      } else {
+        liff.login()
+      }
     }
     //สั่ง main ให้รัน
     main()
