@@ -151,6 +151,9 @@
     }
 
     async function main() {
+      await liff.init({
+        liffId: "1654010534-OlA72E2o"
+      })
       //suport External Browser
       liff.ready.then(() => {
         document.getElementById("isLoggedIn").append(liff.isLoggedIn())
@@ -164,16 +167,6 @@
           liff.login()
         }
       })
-      await liff.init({
-        liffId: "1654010534-OlA72E2o"
-      })
-    }
-
-    async function main() {
-      await liff.init({
-        liffId: "1654010534-OlA72E2o"
-      })
-
     }
     //สั่ง main ให้รัน
     main()
